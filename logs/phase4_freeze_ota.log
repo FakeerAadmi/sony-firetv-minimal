@@ -1,0 +1,111 @@
+=== Phase 4: Enable Projectivy Accessibility & Freeze OTA Updates ===
+Tue Nov 10 17:03:32 IST 2026
+--> 1. Enabling Projectivy Accessibility Service...
+Security exception: Package com.spocky.projengmenu has not requested permission android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Package com.spocky.projengmenu has not requested permission android.permission.WRITE_SECURE_SETTINGS
+	at com.android.server.pm.permission.BasePermission.enforceDeclaredUsedAndRuntimeOrDevelopment(BasePermission.java:398)
+	at com.android.server.pm.permission.PermissionManagerService.grantRuntimePermission(PermissionManagerService.java:1495)
+	at com.android.server.pm.permission.PermissionManagerService.access$1000(PermissionManagerService.java:96)
+	at com.android.server.pm.permission.PermissionManagerService$PermissionManagerInternalImpl.grantRuntimePermission(PermissionManagerService.java:2210)
+	at com.android.server.pm.PackageManagerService.grantRuntimePermission(PackageManagerService.java:5590)
+	at com.android.server.pm.PackageManagerShellCommand.runGrantRevokePermission(PackageManagerShellCommand.java:1737)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:224)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+--> Verified Enabled Accessibility Services:
+io.github.toolicious.homeonfire/io.github.toolicious.homeonfire.HomeInterceptorService:com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService
+--> 2. Freezing Amazon OTA Update Services...
+Security exception: Neither user 2000 nor current process has android.permission.MANAGE_USERS.
+
+java.lang.SecurityException: Neither user 2000 nor current process has android.permission.MANAGE_USERS.
+	at android.app.ContextImpl.enforce(ContextImpl.java:1861)
+	at android.app.ContextImpl.enforceCallingOrSelfPermission(ContextImpl.java:1889)
+	at com.android.server.pm.PackageManagerService.setApplicationHiddenSettingAsUser(PackageManagerService.java:14176)
+	at com.android.server.pm.PackageManagerShellCommand.runSetHiddenSetting(PackageManagerShellCommand.java:1644)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:216)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+Security exception: Cannot disable a protected package: com.amazon.device.software.ota
+
+java.lang.SecurityException: Cannot disable a protected package: com.amazon.device.software.ota
+	at com.android.server.pm.PackageManagerService.setEnabledSetting(PackageManagerService.java:21454)
+	at com.android.server.pm.PackageManagerService.setApplicationEnabledSetting(PackageManagerService.java:21365)
+	at com.android.server.pm.PackageManagerShellCommand.runSetEnabledSetting(PackageManagerShellCommand.java:1617)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:208)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+Package com.amazon.tv.forcedotaupdater.v2 new state: disabled-user
+Security exception: Cannot disable a protected package: com.amazon.device.software.ota.override
+
+java.lang.SecurityException: Cannot disable a protected package: com.amazon.device.software.ota.override
+	at com.android.server.pm.PackageManagerService.setEnabledSetting(PackageManagerService.java:21454)
+	at com.android.server.pm.PackageManagerService.setApplicationEnabledSetting(PackageManagerService.java:21365)
+	at com.android.server.pm.PackageManagerShellCommand.runSetEnabledSetting(PackageManagerShellCommand.java:1617)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:208)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+--> 3. Freezing Heavy Video Ad Engines...
+
+Exception occurred while executing:
+java.lang.IllegalArgumentException: Unknown package: com.amazon.kato
+	at com.android.server.pm.PackageManagerService.setEnabledSetting(PackageManagerService.java:21422)
+	at com.android.server.pm.PackageManagerService.setApplicationEnabledSetting(PackageManagerService.java:21365)
+	at com.android.server.pm.PackageManagerShellCommand.runSetEnabledSetting(PackageManagerShellCommand.java:1617)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:208)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+
+Exception occurred while executing:
+java.lang.IllegalArgumentException: Unknown package: com.amazon.shpm
+	at com.android.server.pm.PackageManagerService.setEnabledSetting(PackageManagerService.java:21422)
+	at com.android.server.pm.PackageManagerService.setApplicationEnabledSetting(PackageManagerService.java:21365)
+	at com.android.server.pm.PackageManagerShellCommand.runSetEnabledSetting(PackageManagerShellCommand.java:1617)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:208)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+
+Exception occurred while executing:
+java.lang.IllegalArgumentException: Unknown package: com.amazon.device.sale.service
+	at com.android.server.pm.PackageManagerService.setEnabledSetting(PackageManagerService.java:21422)
+	at com.android.server.pm.PackageManagerService.setApplicationEnabledSetting(PackageManagerService.java:21365)
+	at com.android.server.pm.PackageManagerShellCommand.runSetEnabledSetting(PackageManagerShellCommand.java:1617)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:208)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:22011)
+	at android.os.Binder.shellCommand(Binder.java:703)
+	at android.os.Binder.onTransact(Binder.java:601)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2796)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4012)
+	at android.os.Binder.execTransact(Binder.java:808)
+--> 4. Updating Disabled Packages List...

@@ -1,0 +1,14 @@
+=== Phase 5: Verification & System Status ===
+Tue Nov 10 17:04:51 IST 2026
+--> Active Window: com.spocky.projengmenu/com.spocky.projengmenu.ui.home.MainActivity
+  mCurrentFocus=Window{4748a u0 com.spocky.projengmenu/com.spocky.projengmenu.ui.home.MainActivity}
+  mFocusedApp=AppWindowToken{5e170a6 token=Token{cc77a01 ActivityRecord{ce2b3e8 u0 com.spocky.projengmenu/.ui.home.MainActivity t915}}}
+--> Enabled Accessibility Services:
+io.github.toolicious.homeonfire/io.github.toolicious.homeonfire.HomeInterceptorService:com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService
+--> Memory Status:
+MemTotal:         922268 kB
+MemFree:           53052 kB
+MemAvailable:     276136 kB
+Buffers:            3020 kB
+Cached:           283132 kB
+SwapCached:         3288 kB

@@ -1,0 +1,18 @@
+=== Phase 1: Pre-Flight Check & Baseline Capture ===
+Tue Nov 10 16:48:07 IST 2026
+already connected to 192.168.10.25:5555
+List of devices attached
+192.168.10.25:5555     device product:sheldon model:AFTSS device:sheldon transport_id:4
+adb-44031JEKB14006-DrGP9I._adb-tls-connect._tcp device product:akita_beta model:Pixel_8a device:akita transport_id:2
+
+MemTotal:         922268 kB
+MemFree:           86216 kB
+MemAvailable:     313304 kB
+Buffers:            4384 kB
+Cached:           312548 kB
+SwapCached:         5824 kB
+Active:           217852 kB
+Inactive:         260464 kB
+Active(anon):      93912 kB
+Inactive(anon):    96968 kB
+ 16:48:12 up 13 min,  0 users,  load average: 5.18, 4.92, 3.27

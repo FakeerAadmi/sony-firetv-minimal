@@ -8,6 +8,7 @@ package:com.amazon.ceviche
 package:com.amazon.neo.minerva.logcat
 package:com.amazon.dp.logger
 package:com.amazon.ods.kindleconnect
+package:com.spotify.tv.android
 package:com.amazon.client.metrics.api
 package:com.android.nfc
 package:com.amazon.perfc

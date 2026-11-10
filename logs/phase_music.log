@@ -1,0 +1,18 @@
+=== Installing Prism TV & Disabling Spotify ===
+Tue Nov 10 17:52:54 IST 2026
+--> 1. Downloading Prism TV v1.8.3.1...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  3 28.7M    3 1039k    0     0  1146k      0  0:00:25 --:--:--  0:00:25 1146k 18 28.7M   18 5423k    0     0  2835k      0  0:00:10  0:00:01  0:00:09 4362k 34 28.7M   34  9.7M    0     0  3449k      0  0:00:08  0:00:02  0:00:06 4494k 52 28.7M   52 14.9M    0     0  3925k      0  0:00:07  0:00:03  0:00:04 4766k 72 28.7M   72 20.8M    0     0  4351k      0  0:00:06  0:00:04  0:00:02 5079k 89 28.7M   89 25.8M    0     0  4473k      0  0:00:06  0:00:05  0:00:01 5078k100 28.7M  100 28.7M    0     0  4625k      0  0:00:06  0:00:06 --:--:-- 5395k
+--> 2. Checksum verification...
+2fa191633d7b353d584f48f326cd7b7f82a8bbff04ec572a3a555baa6951a598  cache/Prism.apk
+--> 3. Installing Prism.apk via ADB...
+Performing Streamed Install
+Success
+--> 4. Disabling Spotify TV app...
+Package com.spotify.tv.android new state: disabled-user
+--> 5. Verifying disabled packages & installed packages...
+package:com.amazon.prism.android.service
+package:com.prism.music
+package:com.spotify.tv.android

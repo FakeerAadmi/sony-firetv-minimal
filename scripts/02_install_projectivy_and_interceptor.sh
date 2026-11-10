@@ -14,19 +14,22 @@ adb connect "$FIRETV_DEVICE"
 echo "==> 1. Fetching latest Home on Fire APK..."
 HOME_ON_FIRE_URL=$(curl -s https://api.github.com/repos/toolicious/home-on-fire/releases/latest | grep "browser_download_url.*apk" | head -n 1 | cut -d '"' -f 4)
 if [[ -z "$HOME_ON_FIRE_URL" ]]; then
-    # Fallback to direct stable release
-    HOME_ON_FIRE_URL="https://github.com/toolicious/home-on-fire/releases/download/v1.1.2/HomeOnFire.apk"
+    HOME_ON_FIRE_URL="https://github.com/toolicious/home-on-fire/releases/download/v1.5.2/home-on-fire.apk"
 fi
-curl -L -o "${CACHE_DIR}/HomeOnFire.apk" "$HOME_ON_FIRE_URL"
+curl -L -o "${CACHE_DIR}/home-on-fire.apk" "$HOME_ON_FIRE_URL"
 
-echo "==> 2. Sideloading Home on Fire..."
-adb -s "$FIRETV_DEVICE" install -r "${CACHE_DIR}/HomeOnFire.apk"
+echo "==> 2. Fetching Projectivy Launcher APK..."
+PROJECTIVY_URL="https://github.com/spocky/miproja1/releases/download/4.73/ProjectivyLauncher-4.73-c98-xda-release.apk"
+curl -L -o "${CACHE_DIR}/ProjectivyLauncher.apk" "$PROJECTIVY_URL"
 
-echo "==> 3. Granting secure settings permissions..."
+echo "==> 3. Sideloading APKs..."
+adb -s "$FIRETV_DEVICE" install -r "${CACHE_DIR}/home-on-fire.apk"
+adb -s "$FIRETV_DEVICE" install -r "${CACHE_DIR}/ProjectivyLauncher.apk"
+
+echo "==> 4. Granting secure settings permissions to Home on Fire..."
 adb -s "$FIRETV_DEVICE" shell pm grant io.github.toolicious.homeonfire android.permission.WRITE_SECURE_SETTINGS
 
-echo "==> 4. Enabling Home on Fire Accessibility Service..."
-# Appends Home on Fire to current accessibility services
+echo "==> 5. Enabling Home on Fire Accessibility Service..."
 CURRENT_SERVICES=$(adb -s "$FIRETV_DEVICE" shell settings get secure enabled_accessibility_services | tr -d '\r')
 TARGET_SERVICE="io.github.toolicious.homeonfire/io.github.toolicious.homeonfire.HomeInterceptorService"
 
@@ -37,13 +40,4 @@ elif [[ "$CURRENT_SERVICES" != *"$TARGET_SERVICE"* ]]; then
 fi
 adb -s "$FIRETV_DEVICE" shell settings put secure accessibility_enabled 1
 
-echo "==> 5. Ready for Projectivy Launcher APK."
-echo "Please place or download Projectivy Launcher APK to: ${CACHE_DIR}/projectivy.apk"
-if [[ -f "${CACHE_DIR}/projectivy.apk" ]]; then
-    echo "Installing Projectivy Launcher..."
-    adb -s "$FIRETV_DEVICE" install -r "${CACHE_DIR}/projectivy.apk"
-else
-    echo "Note: Download Projectivy Launcher and run: adb -s ${FIRETV_DEVICE} install -r <path_to_projectivy.apk>"
-fi
-
-echo "==> Done! Open Home on Fire on your Fire TV to select Projectivy as default."
+echo "==> Done! Packages installed and accessibility service configured."

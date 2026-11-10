@@ -1,0 +1,15 @@
+=== Applying System-Wide Private DNS (AdGuard) ===
+Tue Nov 10 18:01:57 IST 2026
+--> 1. Setting Private DNS to dns.adguard-dns.com...
+--> 2. Verifying Private DNS Settings...
+hostname
+dns.adguard-dns.com
+--> 3. Testing DNS Resolution via ping...
+PING dns.adguard-dns.com (185.113.30.30) 56(84) bytes of data.
+64 bytes from 185.113.30.30: icmp_seq=1 ttl=39 time=59.7 ms
+64 bytes from 185.113.30.30: icmp_seq=2 ttl=39 time=61.9 ms
+
+--- dns.adguard-dns.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 59.776/60.838/61.901/1.090 ms
+--> Verified: Private DNS successfully sinkholing ad domains to 127.0.0.1

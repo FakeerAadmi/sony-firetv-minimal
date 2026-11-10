@@ -1,0 +1,12 @@
+org.smarttube.stable
+com.amazon.firetv.youtube
+com.apple.atve.amazon.appletv
+com.spotify.tv.android
+tv.airtel.xstream.tvapp
+in.startv.hotstar
+com.neilturner.aerialviews
+com.zee5.amazon
+com.esaba.downloader
+com.ionitech.airscreen
+com.netflix.ninja
+com.stremio.one

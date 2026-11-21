@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-FIRETV_IP="${1:-192.168.10.25}"
+FIRETV_IP="${1:-192.168.10.4}"
 PORT="${2:-5555}"
 
 echo "==> Ensuring ADB server is alive..."

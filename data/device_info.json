@@ -11,7 +11,7 @@
     "codename": "sheldon",
     "market_name": "Fire TV Stick Lite / 3rd Gen",
     "serial": "GT51WC106097008T",
-    "ip_address": "192.168.10.25",
+    "ip_address": "192.168.10.4",
     "adb_port": 5555
   },
   "os": {
@@ -25,11 +25,15 @@
   "hardware": {
     "cpu_abi": "armeabi-v7a",
     "ram_total_kb": 922268,
-    "ram_free_kb": 50140,
-    "ram_available_kb": 233948,
     "storage_total": "4.9G",
-    "storage_used": "2.7G",
-    "storage_available": "2.0G",
+    "storage_used": "2.5G",
+    "storage_available": "2.2G",
     "display_resolution": "1920x1080"
+  },
+  "youtube_client": {
+    "package": "org.smarttube.beta",
+    "version": "32.80",
+    "channel": "Beta",
+    "status": "Verified & Working"
   }
 }
